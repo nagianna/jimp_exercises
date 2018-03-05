@@ -1,7 +1,3 @@
-//
-// Created by annanagi on 05.03.18.
-//
-
 
 #include "DoubleBasePalindromes.h"
 
@@ -40,19 +36,6 @@ std::string DecimalToBinary (int g){
     std::string reverse(binary.begin(),binary.end());
     return binary;
 }
-/*
-uint64_t DecimalToBinary (int g){
-    uint64_t rem, i=1;
-    uint64_t binary=0;
-    while (g!=0)
-    {
-        rem=g%2;
-        g/=2;
-        binary+=rem*i;
-        i*=10;
-    }
-    return binary;
-} */
 
 
 uint64_t DoubleBasePalindromes(int max_value_exculsive) {
@@ -68,9 +51,6 @@ uint64_t DoubleBasePalindromes(int max_value_exculsive) {
         s1 << g;
         std::string str = s1.str();
         if (is_palindrome(str) == true) {
-            /*std::ostringstream s2;
-            s2 << DecimalToBinary(g);
-            std::string str = s2.str();*/
             str=DecimalToBinary(g);
             if (is_palindrome(str) == true) {
                 suma += g;

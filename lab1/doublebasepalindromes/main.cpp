@@ -8,9 +8,18 @@
 #include "DoubleBasePalindromes.h"
 
 
-int main(){
-    int max_value_exclusive;
-    uint64_t suma=DoubleBasePalindromes(max_value_exculsive);
-    std::cout<<"Suma liczb, ktore sa podwojnymi palindromami wynosi: "<<suma;
+int main() {
+    int max_value_exculsive;
+    std::cout << "Podaj liczbe mniejsza lub rowna 1000000: " << std::endl;
+    std::cin >> max_value_exculsive;
+    if (max_value_exculsive > 1000000) {
+        std::cout << "Podaj liczbe mniejsza od 1000000: " << std::endl;
+        std::cin >> max_value_exculsive;
+    }
+    else {
+    int suma = DoubleBasePalindromes(max_value_exculsive);
+    std::cout << "Suma liczb, ktore sa podwojnymi palindromami wynosi: " << suma;
+    }
+
     return 0;
 }

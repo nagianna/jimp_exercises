@@ -15,7 +15,7 @@
 
 
 bool is_palindrome(std::string str);
-uint64_t DecimalToBinary (int g);
+std::string DecimalToBinary (int g);
 
 uint64_t DoubleBasePalindromes(int max_value_exculsive);
 

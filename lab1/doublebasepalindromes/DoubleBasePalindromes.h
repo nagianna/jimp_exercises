@@ -1,6 +1,7 @@
 //
-// Created by annanagi on 02.03.18.
+// Created by annanagi on 05.03.18.
 //
+
 
 #ifndef JIMP_EXERCISES_DOUBLEBASEPALINDROMES_H
 #define JIMP_EXERCISES_DOUBLEBASEPALINDROMES_H
@@ -11,9 +12,14 @@
 #include <sstream>
 #include <cstdint>
 
-bool is_palindrome(std::string str);
 
-uint64_t DoubleBasePalindrome(int max_value_exculsive);
+
+bool is_palindrome(std::string str);
+uint64_t DecimalToBinary (int g);
+
+uint64_t DoubleBasePalindromes(int max_value_exculsive);
 
 
 #endif //JIMP_EXERCISES_DOUBLEBASEPALINDROMES_H
+
+

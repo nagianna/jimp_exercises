@@ -1,0 +1,68 @@
+//
+// Created by annanagi on 05.03.18.
+//
+
+
+#include "DoubleBasePalindromes.h"
+
+bool is_palindrome(std::string str){
+    const int size=str.size()/2;
+
+    int j=0;
+    if(str.size()%2==0){
+        j=size*2-1;
+    }
+    if(str.size()%2==1){
+        j=size*2;
+    }
+
+    for(int i=0; i < size; i++){
+        if(str[i]!=str[j]) {
+            return false;
+        }
+        j--;
+    }
+    return true;
+}
+
+uint64_t DecimalToBinary (int g){
+    uint64_t rem, i=1;
+    uint64_t binary=0;
+    while (g!=0)
+    {
+        rem=g%2;
+        g/=2;
+        binary+=rem*i;
+        i*=10;
+    }
+    return binary;
+}
+
+
+uint64_t DoubleBasePalindromes(int max_value_exculsive) {
+ //   if (max_value_exculsive <= 1000000) {
+        int g;
+        int suma = 0;
+        for (g = 0; g < max_value_exculsive; g++) {
+            std::ostringstream s1;
+            s1 << g;
+            std::string str = s1.str();
+            if (is_palindrome(str) == true) {
+                std::ostringstream s2;
+                s2 << DecimalToBinary(g);
+                std::string str = s2.str();
+                if (is_palindrome(str) == true) {
+                    // std::cout<<"Liczba w obu wariantach jest palindromem.";
+                    // std::cout<<str;
+                    suma += g;
+                }
+            }
+        }
+        return suma;
+  //  }
+
+  //  if (max_value_exculsive>1000000){
+    //    return 25846868;
+    //}
+}
+

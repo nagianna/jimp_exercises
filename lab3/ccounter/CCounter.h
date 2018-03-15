@@ -1,20 +1,15 @@
-//
-// Created by rubadani on 13.03.18.
-//
-
 #ifndef JIMP_EXERCISES_CCOUNTER_H
 #define JIMP_EXERCISES_CCOUNTER_H
 
-#include <iostream>
 #include <string>
 #include <memory>
 #include <map>
+#include <iostream>
 
 namespace ccounter {
     struct Counter {
-        std::map<std::string, int> counter;
+        std::map<std::string, int> countersMap;
     };
-
     std::unique_ptr<Counter> Init();
     void Inc(std::string key, std::unique_ptr<Counter>* counter);
     int Counts(const std::unique_ptr<Counter> &counter, std::string key);
